@@ -7,6 +7,8 @@ The enum implements com.vaadin.server.FontIcon, so it works just like the existi
 
 This addon is currently packaged with FontAwesome 4.1.0.
 
+Vaadin Directory: http://vaadin.com/addon/fontawesomelabel
+
 
 Code Example
 ============

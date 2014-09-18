@@ -1,11 +1,17 @@
 FontAwesome-Vaadin
 ==================
 
-Vaadin add-on that allows you to add FontAwesome icons to your applications with modifiers like stack, spin, and flip.
+Do you want some of the newer FontAwesome icons not currently packaged in Vaadin? This addon implements an enum to include them and enhance the Vaddin functionality. 
+
+The enum implements com.vaadin.server.FontIcon, so it works just like the existing implementation with a few modifications. You can use setIcon() with it as expected, but also included is a getLabel() method that returns a label with all of the fancy FontAwesome modifier classes available. You can chain methods like setSize2x(), setBorder(), setPullLeft(), spin(), etc. to set the modifiers. 
+
+This addon is currently packaged with FontAwesome 4.1.0.
 
 
-Code Example:
+Code Example
+============
 
+```java
 import com.kbdunn.vaadin.addons.fontawesome.FontAwesome;
 
 // 3x Large Spinning Cog!
@@ -19,3 +25,4 @@ content.addComponent(FontAwesome.HDD_O.getLabel().stack(FontAwesome.EXCLAMATION.
 
 // Set the icon of another Vaadin component
 button.setIcon(FontAwesome.SMILE_O);
+```

@@ -32,9 +32,9 @@ public class FontAwesomeLabel extends Label {
     	setValue(getCssHtml());
     }
 
-    public String getCssClasses() {
+    public String getCssClasses(boolean ignoreSize) {
     	String classes = "fa " + icon.clazz;
-    	classes += size != null ? " " + size : "";
+    	classes += !ignoreSize && size != null ? " " + size : "";
     	classes += fixedWidth != null ? " " + fixedWidth : "";
     	classes += border != null ? " " + border : "";
     	classes += spin != null ? " " + spin : "";
@@ -48,12 +48,12 @@ public class FontAwesomeLabel extends Label {
     
     public String getCssHtml() {
     	if (stacked == null) {
-    		return "<i class=\"" + getCssClasses() + "\" style=\"" + custom + "\"/></i>";
+    		return "<i class=\"" + getCssClasses(false) + "\" style=\"" + custom + "\"/></i>";
     	} 
     	// Get stack size (bottom object takes precedence). Clear individual sizes.
     	String stackSize = size != null ? size : stacked.size != null ? stacked.size : null;
     	return "<span class=\"fa-stack " + stackSize + "\">"
-    			+ "<i class=\"" + getCssClasses() + "\" style=\"" + custom + "\"/></i>"
+    			+ "<i class=\"" + getCssClasses(true) + "\" style=\"" + custom + "\"/></i>"
     			+ stacked.getCssHtml()
     			+ "</span>";
     }

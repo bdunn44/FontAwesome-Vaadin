@@ -40,6 +40,9 @@
 		<!-- Compiler for custom widget sets. Should not be deployed -->
 		<dependency org="com.vaadin" name="vaadin-client-compiler"
 			rev="&vaadin.version;" conf="widgetset-compile->default" />
+			
+		<!-- JSoup HTML Parser -->
+		<dependency org="org.jsoup" name="jsoup" rev="1.7.2"/>
 		
 	</dependencies>
 </ivy-module>

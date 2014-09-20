@@ -8,7 +8,7 @@ import com.vaadin.ui.Label;
 public class FontAwesomeLabel extends Label {
 
 	private static final long serialVersionUID = -1987552834791565983L;
-	private static final ThemeResource fontAwesomeSource = new ThemeResource("../../addons/font-awesome-4.1.0/css/font-awesome.min.css");
+	private static final ThemeResource fontAwesomeSource = new ThemeResource("../../addons/font-awesome-4.2.0/css/font-awesome.min.css");
 	
 	private String size, fixedWidth, border, spin, pull, rotate, flip, inverse, stackOrder, custom;
     private FontAwesomeLabel stacked;

@@ -5,7 +5,7 @@ Do you want some of the newer FontAwesome icons not currently packaged in Vaadin
 
 The enum implements com.vaadin.server.FontIcon, so it works just like the existing implementation with a few modifications. You can use setIcon() with it as expected, but also included is a getLabel() method that returns a label with all of the fancy FontAwesome modifier classes available. You can chain methods like setSize2x(), setBorder(), setPullLeft(), spin(), etc. to set the modifiers. 
 
-This addon is currently packaged with FontAwesome 4.1.0.
+This addon is currently packaged with FontAwesome 4.2.0.
 
 Vaadin Directory: http://vaadin.com/addon/fontawesomelabel
 

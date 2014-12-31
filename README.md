@@ -52,7 +52,7 @@ If you've upgraded from an older version of Vaadin (prior to 7.1) you may also n
 @import "addons.scss";
 @import "mytheme.scss";
 
-.addontests {
+.mytheme {
 	@include addons;
 	@include mytheme;
 }

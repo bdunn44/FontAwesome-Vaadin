@@ -1,6 +1,7 @@
-Manifest-Version: 1.0
+Manifest-Version: 1.1.3
 Implementation-Title: FontAwesomeLabel
-Implementation-Version: 1.1.2
+Implementation-Version: 1.1.3
 Vaadin-Package-Version: 1
+Vaadin-Stylesheets: VAADIN/addons/font-awesome-4.2.0/css/font-awesome.css
 Class-Path: 
 

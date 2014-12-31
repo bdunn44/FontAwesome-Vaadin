@@ -1,14 +1,11 @@
 package com.kbdunn.vaadin.addons.fontawesome;
 
-import com.vaadin.server.Page;
-import com.vaadin.server.ThemeResource;
 import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.ui.Label;
 
 public class FontAwesomeLabel extends Label {
 
 	private static final long serialVersionUID = -1987552834791565983L;
-	private static final ThemeResource fontAwesomeSource = new ThemeResource("../../addons/font-awesome-4.2.0/css/font-awesome.min.css");
 	
 	private String size, fixedWidth, border, spin, pull, rotate, flip, inverse, stackOrder, custom;
     private FontAwesomeLabel stacked;
@@ -19,19 +16,18 @@ public class FontAwesomeLabel extends Label {
     	setContentMode(ContentMode.HTML);
     	addAttachListener(new AttachListener() {
 			private static final long serialVersionUID = 1L;
-
+			
 			@Override
 			public void attach(AttachEvent event) {
-				Page.getCurrent().getStyles().add(fontAwesomeSource);
 				applyChanges();
 			}
     	});
     }
     
     public void applyChanges() {
-    	setValue(getCssHtml());
+    	super.setValue(getCssHtml());
     }
-
+    
     public String getCssClasses(boolean ignoreSize) {
     	String classes = "fa " + icon.clazz;
     	classes += !ignoreSize && size != null ? " " + size : "";

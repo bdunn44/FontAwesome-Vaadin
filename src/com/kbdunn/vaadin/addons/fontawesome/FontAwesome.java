@@ -554,15 +554,15 @@ public enum FontAwesome implements FontIcon {
 	YOUTUBE_PLAY("fa-youtube-play", 0xf16a),
 	YOUTUBE_SQUARE("fa-youtube-square", 0xf166);
 	
-	private static final String fontFamily = "FontAwesome";
+	private static final String fontFamily = "FontAwesomeLabelAddon";
     private int codepoint;
     protected String clazz;
-
+    
     FontAwesome(String clazz, int codepoint) {
         this.codepoint = codepoint;
         this.clazz = clazz;
     }
-
+    
     public String getClazz() {
     	return clazz;
     }
@@ -576,17 +576,17 @@ public enum FontAwesome implements FontIcon {
         throw new UnsupportedOperationException(FontIcon.class.getSimpleName()
                 + " should not be used where a MIME type is needed.");
     }
-
+    
     @Override
     public String getFontFamily() {
         return fontFamily;
     }
-
+    
     @Override
     public int getCodepoint() {
         return codepoint;
     }
-
+    
     @Override
     public String getHtml() {
         return "<span class=\"v-icon\" style=\"font-family: " + fontFamily

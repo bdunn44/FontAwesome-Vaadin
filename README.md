@@ -31,7 +31,11 @@ button.setIcon(FontAwesome.SMILE_O);
 
 This addon leverages Vaadin's custom manifest attribute `Vaadin-Stylesheets`, which adds updates the `addons.scss` file in your theme directory with the styles required this (and other) addons. I've personally had trouble with the Eclipse plugin not executing this process reliably. If you have the same issue you may need to:
 
-  1.  Run the process manually to update `addons.scss`. You'll need to find the location of `vaadin-server-xxx.jar` (it may be in your Ivy cache) and run `java -cp /path/to/vaadin-server-xxx.jar;/path/to/font-awesome-label-1.1.3.jar com.vaadin.server.themeutils.SASSAddonImportFileCreator /path/to/VAADIN/themes/mythemedir`. It will scan the addons on your classpath and should update `addons.scss` to look like the example in option 2.
+  1.  Run the process manually to update `addons.scss`. You'll need to find the location of `vaadin-server-xxx.jar` (it may be in your Ivy cache) and run this command: 
+	```sh
+	java -cp /path/to/vaadin-server-xxx.jar;/path/to/font-awesome-label-1.1.3.jar com.vaadin.server.themeutils.SASSAddonImportFileCreator /path/to/VAADIN/themes/mythemedir
+	```
+      It will scan any addons on your classpath (only font-awesome-label-1.1.3.jar in the example above) and will update `addons.scss` to look like the example in option 2.
   2.  ...Or just edit `addons.scss` manually. It will be overwritten the next time the automatic process runs (if it ever does), but this will turn the lights on. The file should have lines to `@import` and `@include` the stylesheet like this:
       ```scss
       /* This file is automatically managed and will be overwritten from time to time. */

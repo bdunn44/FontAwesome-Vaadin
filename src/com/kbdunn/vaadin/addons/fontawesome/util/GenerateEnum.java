@@ -55,11 +55,11 @@ public class GenerateEnum {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-            try {
-                if (writer != null) writer.close();
-            } catch (Exception e) {
-            	//Ignore
-            }
-        }
+			try {
+				if (writer != null) writer.close();
+			} catch (Exception e) {
+			    //Ignore
+			}
+	        }
 	}
 }

@@ -33,10 +33,10 @@ This addon leverages Vaadin's custom manifest attribute `Vaadin-Stylesheets`, wh
 
   1.  Run the process manually to update `addons.scss`. You'll need to find the location of `vaadin-server-xxx.jar` (it may be in your Ivy cache) and run this command:
 	```bash
-	java -cp /path/to/vaadin-server-xxx.jar;/path/to/font-awesome-label-1.1.3.jar com.vaadin.server.themeutils.SASSAddonImportFileCreator /path/to/VAADIN/themes/mythemedir
+	java -cp /path/to/vaadin-server-xxx.jar;/path/to/font-awesome-label-1.1.4.jar com.vaadin.server.themeutils.SASSAddonImportFileCreator /path/to/VAADIN/themes/mythemedir
 	```
       
-      This will scan addons on your classpath (only font-awesome-label-1.1.3.jar in the example above) and will update `addons.scss` to look like the example in option 2.
+      This will scan addons on your classpath (only font-awesome-label-1.1.4.jar in the example above) and will update `addons.scss` to look like the example in option 2.
   2.  ...Or just edit `addons.scss` manually. It will be overwritten the next time the automatic process runs (if it ever does), but this will turn the lights on. The file should have lines to `@import` and `@include` the stylesheet like this:
       ```scss
       /* This file is automatically managed and will be overwritten from time to time. */

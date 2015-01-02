@@ -29,7 +29,7 @@ button.setIcon(FontAwesome.SMILE_O);
 
 ##Troubleshooting
 
-This addon leverages Vaadin's custom manifest attribute `Vaadin-Stylesheets`, which adds updates the `addons.scss` file in your theme directory with the styles required this (and other) addons. I've personally had trouble with the Eclipse plugin not executing this process reliably. If you have the same issue you may need to:
+This addon leverages Vaadin's custom manifest attribute `Vaadin-Stylesheets`, which adds updates the `addons.scss` file in your theme directory with the styles required by this (and other) addons. I've personally had trouble with the Eclipse plugin not executing this process reliably. If you have the same issue you may need to:
 
   1.  Run the process manually to update `addons.scss`. You'll need to find the location of `vaadin-server-xxx.jar` (it may be in your Ivy cache) and run this command:
 	```bash
@@ -42,7 +42,7 @@ This addon leverages Vaadin's custom manifest attribute `Vaadin-Stylesheets`, wh
       /* This file is automatically managed and will be overwritten from time to time. */
       /* Do not manually edit this file. */
       
-      /* Provided by font-awesome-label-1.1.3.jar */
+      /* Provided by font-awesome-label-1.1.4.jar */
       @import "../../../VAADIN/addons/font-awesome-4.2.0/css/_font-awesome.scss";
       
       /* Import and include this mixin into your project theme to include the addon themes */

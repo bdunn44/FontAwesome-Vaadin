@@ -29,7 +29,7 @@ button.setIcon(FontAwesome.SMILE_O);
 
 ##Troubleshooting
 
-If you've upgraded from an older version of Vaadin (prior to 7.1) you may also need to update the `styles.scss` file for your theme. It should include the `addons.scss` mixin like this:
+If you've upgraded from an older version of Vaadin (prior to 7.1) you may need to update the `styles.scss` file for your theme. It should include the `addons.scss` mixin like this:
 
 ```scss
 @import "addons.scss";

@@ -43,7 +43,7 @@ If you've upgraded from an older version of Vaadin (prior to 7.1) you may also n
 
 This addon leverages Vaadin's custom manifest attribute `Vaadin-Stylesheets`, which updates the `addons.scss` file in your theme directory with the stylesheets required by this addon. I've personally had trouble with the Eclipse plugin executing this process reliably. If you have the same issue you may need to:
 
-  1.  Check the "Suspend automatic addon theme scanning" property in the "Vaadin" page of your project properties. If it's unchecked, try checking it > apply > unchecking it > Ok. This fixed the problem for me. If it doesn't for you, continue to steps 2 and 3.
+  1.  Verify that the "Suspend automatic addon theme scanning" property in the "Vaadin" page of your project properties is unchecked. If it's unchecked, try checking it > Apply > unchecking it > Ok. This fixed the problem for me. If it doesn't for you, continue to steps 2 and 3.
   2.  Run the process manually to update `addons.scss`. You'll need to find the location of `vaadin-server-xxx.jar` (it may be in your Ivy cache) and run this command:
 	```bash
 	java -cp /path/to/vaadin-server-xxx.jar;/path/to/font-awesome-label-1.1.4.jar com.vaadin.server.themeutils.SASSAddonImportFileCreator /path/to/VAADIN/themes/mythemedir

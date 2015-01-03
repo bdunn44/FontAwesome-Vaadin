@@ -18,7 +18,7 @@ public class GenerateEnum {
 
 	private static final String SOURCE = "http://fortawesome.github.io/Font-Awesome/cheatsheet/";
 	private static final String ENUM_FILE = "C:\\Users\\kdunn\\Documents\\STS\\FontAwesome-Vaadin\\src\\com\\kbdunn\\vaadin\\addons\\fontawesome\\FontAwesome.java";
-	private static final String ENUM_ENTRY_REGEX = "\\s+[A-Z0-9_]+\\(\\\"fa-.+\\)[,;]";
+	private static final String ENUM_ENTRY_REGEX = "\\t[A-Z0-9_]+\\(\\\"fa-.+\\),";
 	
 	public static void main(String[] args) {
 			writeFile(getIcons());
@@ -63,15 +63,14 @@ public class GenerateEnum {
 				if (enumstart > 0) {
 					// Check if we're still in the enum
 					if (!inline.matches(ENUM_ENTRY_REGEX)) {
-						System.out.println("\tEnum entries end on line " + (current - 1) + ". "
-								+ "Replaced " + (current - enumstart) + " icon entries.");
+						System.out.println("\tIcon entries end on line " + current + ". "
+								+ "Replaced " + (current - enumstart + 1) + " icons.");
 						enumstart = 0;
-						writer.write(inline + "\n");
 					}
 				} else if (inline.contains("public enum FontAwesome")) {
 					// Enum entries start on next line
 					enumstart = current + 1;
-					System.out.println("\tEnum entries start on line " + enumstart + ".");
+					System.out.println("\tIcon entries start on line " + enumstart + ".");
 					writer.write(inline + "\n");
 					
 					// Write the new enum entries

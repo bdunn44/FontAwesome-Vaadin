@@ -63,14 +63,14 @@ public class GenerateEnum {
 				if (enumstart > 0) {
 					// Check if we're still in the enum
 					if (!inline.matches(ENUM_ENTRY_REGEX)) {
-						System.out.println("\tIcon entries end on line " + current + ". "
+						System.out.println("\tIcons end on line " + current + ". "
 								+ "Replaced " + (current - enumstart + 1) + " icons.");
 						enumstart = 0;
 					}
 				} else if (inline.contains("public enum FontAwesome")) {
 					// Enum entries start on next line
 					enumstart = current + 1;
-					System.out.println("\tIcon entries start on line " + enumstart + ".");
+					System.out.println("\tIcons start on line " + enumstart + ".");
 					writer.write(inline + "\n");
 					
 					// Write the new enum entries

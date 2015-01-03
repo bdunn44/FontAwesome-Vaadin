@@ -1,10 +1,12 @@
 #FontAwesome-Vaadin
 
-Do you want some of the newer FontAwesome icons not currently packaged in Vaadin? This addon implements an enum to include them and enhance the Vaddin functionality. 
+Do you want the newer Font Awesome icons not currently packaged in Vaadin? This addon includes a replacement FontAwesome enum with the latest icons, and enhances their native functionality. 
 
-The enum implements `com.vaadin.server.FontIcon`, so it works just like the existing implementation with a few modifications. You can use `setIcon()` with it as expected, but also included is a `getLabel()` method that returns a label with all of the fancy FontAwesome modifier classes available. You can chain methods like `setSize2x()`, `setBorder()`, `setPullLeft()`, `spin()`, etc. to set the modifiers. 
+The enum works just like the existing implementation, so  `setIcon()` works as you would expect. Also included is a `getLabel()` method, which returns a label component with all of the CSS classes that Font Awesome provides. This component allows you to add multiple modifiers to your icons in a one-liner fashion by chaining methods such as `stack()`, `spin()`, `setSize2x()`, `setBorder()`, etc.
 
-This addon is currently packaged with FontAwesome 4.2.0. To use it add the JAR file to your classpath. It may be necessary to re-compile your theme.
+This addon is currently packaged with FontAwesome 4.2.0. To use it add the JAR file to your classpath. It may be necessary to re-compile your theme. If you're having trouble using this addon please see the Troubleshooting section below.
+
+The code written for this addon (FontAwesome, FontAwesomeLabel and HTML scraper) is licensed under the Apache 2.0 license. Font Awesome is licensed under the MIT and SIL OFL 1.1 licenses. See fontawesome.io/license for more information.
 
 Vaadin Directory: http://vaadin.com/addon/fontawesomelabel
 

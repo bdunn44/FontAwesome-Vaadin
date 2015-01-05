@@ -38,19 +38,21 @@ public class FontAwesomeLabel extends Label {
     	classes += rotate != null ? " " + rotate : "";
     	classes += flip != null ? " " + flip : "";
     	classes += inverse != null ? " " + inverse : "";
-    	classes += stackOrder != null ? " " + stackOrder : "";
+    	classes += stacked != null && stackOrder != null ? " " + stackOrder : "";
     	return classes;
     }
     
     public String getCssHtml() {
     	if (stacked == null) {
-    		return "<i class=\"" + getCssClasses(false) + "\" style=\"" + custom + "\"/></i>";
+    		return "<i class=\"" + getCssClasses(false) + "\"" 
+    				+ (custom != null ? "style=\"" + custom + "\"" : "") + "/></i>";
     	} 
     	// Get stack size (bottom object takes precedence). Clear individual sizes.
     	String stackSize = size != null ? size : stacked.size != null ? stacked.size : null;
     	return "<span class=\"fa-stack " + stackSize + "\">"
-    			+ "<i class=\"" + getCssClasses(true) + "\" style=\"" + custom + "\"/></i>"
-    			+ stacked.getCssHtml()
+    				+ "<i class=\"" + getCssClasses(true) + "\""
+    					+ (custom != null ? "style=\"" + custom + "\"" : "") + "/></i>"
+    				+ stacked.getCssHtml()
     			+ "</span>";
     }
     
@@ -79,6 +81,7 @@ public class FontAwesomeLabel extends Label {
     }
     
     public FontAwesomeLabel setSize6x() {
+    	if (custom == null) custom = "";
     	custom += "font-size: 6em;"; return this;
     }
     

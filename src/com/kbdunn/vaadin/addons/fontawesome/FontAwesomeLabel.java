@@ -52,7 +52,8 @@ public class FontAwesomeLabel extends Label {
     	return "<span class=\"fa-stack " + stackSize + "\">"
     				+ "<i class=\"" + getCssClasses(true) + "\""
     					+ (custom != null ? "style=\"" + custom + "\"" : "") + "/></i>"
-    				+ stacked.getCssHtml()
+    				+ "<i class=\"" + stacked.getCssClasses(true) + "\""
+        				+ (stacked.custom != null ? "style=\"" + stacked.custom + "\"" : "") + "/></i>"
     			+ "</span>";
     }
     
@@ -81,8 +82,7 @@ public class FontAwesomeLabel extends Label {
     }
     
     public FontAwesomeLabel setSize6x() {
-    	if (custom == null) custom = "";
-    	custom += "font-size: 6em;"; return this;
+    	size = "fa-6x"; return this;
     }
     
     public FontAwesomeLabel fixedWidth() {

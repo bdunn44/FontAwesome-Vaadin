@@ -38,7 +38,7 @@ public class FontAwesomeLabel extends Label {
     	classes += rotate != null ? " " + rotate : "";
     	classes += flip != null ? " " + flip : "";
     	classes += inverse != null ? " " + inverse : "";
-    	classes += stacked != null && stackOrder != null ? " " + stackOrder : "";
+    	classes += stackOrder != null ? " " + stackOrder : "";
     	return classes;
     }
     
@@ -141,9 +141,12 @@ public class FontAwesomeLabel extends Label {
     }
     
     public FontAwesomeLabel reverseStackSize() {
-    	stackOrder = "fa-stack-2x"; 
-    	if (stacked != null) stacked.stackOrder = "fa-stack-1x";
-    	return this;
+    	if (stackOrder != null && stacked != null) {
+	    	stackOrder = "fa-stack-2x"; 
+	    	stacked.stackOrder = "fa-stack-1x";
+	    	return this;
+    	}
+    	throw new UnsupportedOperationException("Cannot call reverseStackSize() before a stacked icon has been set.");
     }
     
     public FontAwesomeLabel clearStack() {

@@ -589,7 +589,6 @@ public enum FontAwesome implements FontIcon {
     
     @Override
     public String getHtml() {
-        return "<span class=\"v-icon\" style=\"font-family: " + fontFamily
-                + ";\">&#x" + Integer.toHexString(codepoint) + ";</span>";
+        return "<i class=\"v-icon fa " + clazz + "\"/>";
     }
 }

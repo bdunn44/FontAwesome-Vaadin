@@ -633,6 +633,6 @@ public enum FontAwesome implements FontIcon {
     
     @Override
     public String getHtml() {
-        return "<i class=\"v-icon fa " + clazz + "\"/>";
+        return "<i class=\"v-icon fa " + clazz + "\"></i>";
     }
 }

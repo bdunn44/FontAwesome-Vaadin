@@ -45,15 +45,15 @@ public class FontAwesomeLabel extends Label {
     public String getCssHtml() {
     	if (stacked == null) {
     		return "<i class=\"" + getCssClasses(false) + "\"" 
-    				+ (custom != null ? "style=\"" + custom + "\"" : "") + "/>";
+    				+ (custom != null ? "style=\"" + custom + "\"" : "") + "></i>";
     	} 
     	// Get stack size (bottom object takes precedence). Clear individual sizes.
     	String stackSize = size != null ? size : stacked.size != null ? stacked.size : null;
     	return "<span class=\"fa-stack " + (stackSize != null ? stackSize : "") + "\">"
     				+ "<i class=\"" + getCssClasses(true) + "\""
-    					+ (custom != null ? "style=\"" + custom + "\"" : "") + "/>"
+    					+ (custom != null ? "style=\"" + custom + "\"" : "") + "></i>"
     				+ "<i class=\"" + stacked.getCssClasses(true) + "\""
-        				+ (stacked.custom != null ? "style=\"" + stacked.custom + "\"" : "") + "/>"
+        				+ (stacked.custom != null ? "style=\"" + stacked.custom + "\"" : "") + "></i>"
     			+ "</span>";
     }
     

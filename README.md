@@ -43,7 +43,7 @@ If you've upgraded from an older version of Vaadin (prior to 7.1) you may need t
 }
 ```
 
-This addon leverages Vaadin's custom manifest attribute `Vaadin-Stylesheets`, which updates the `addons.scss` file in your theme directory with the stylesheets required by this addon. I've personally had trouble with the Eclipse plugin executing this process reliably. If you have the same issue follow these steps:
+This addon leverages Vaadin's custom manifest attribute `Vaadin-Stylesheets`, which updates the `addons.scss` file in your theme directory with the stylesheets required by this addon. I've had trouble getting the Eclipse plugin to execute this process. If you have the same issue follow these steps:
 
   1.  Verify that your Eclipse `.project` file has the following `buildCommand` nodes:
 

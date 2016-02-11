@@ -17,7 +17,7 @@ import org.jsoup.nodes.Element;
 public class GenerateEnum {
 
 	private static final String SOURCE = "http://fortawesome.github.io/Font-Awesome/cheatsheet/";
-	private static final String ENUM_FILE = "C:\\Users\\kdunn\\Documents\\STS\\FontAwesome-Vaadin\\src\\com\\kbdunn\\vaadin\\addons\\fontawesome\\FontAwesome.java";
+	private static final String ENUM_FILE = "src/com/kbdunn/vaadin/addons/fontawesome/FontAwesome.java";
 	private static final String ENUM_ENTRY_REGEX = "\\t[A-Z0-9_]+\\(\\\"fa-.+\\),";
 	
 	public static void main(String[] args) {
@@ -34,9 +34,9 @@ public class GenerateEnum {
 			
 			// Loop through icons, get class and hex, add to map
 			String cssClass, hex;
-			for (Element e : html.getElementsByClass("row").get(0).children()) { // Cheatsheet has only 1 .row element
+			for (Element e : html.getElementsByClass("row").get(1).children()) { // Cheatsheet has only 1 .row element
 				cssClass = e.ownText();
-				hex = e.getElementsByClass("muted").get(0).ownText().replace("[&#x", "").replace(";]", "");
+				hex = e.getElementsByClass("text-muted").last().ownText().replace("[&#x", "").replace(";]", "");
 				icons.put(cssClass, hex);
 			}
 		} catch (IOException e) {

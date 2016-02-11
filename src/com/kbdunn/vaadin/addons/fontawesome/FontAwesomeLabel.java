@@ -94,11 +94,11 @@ public class FontAwesomeLabel extends Label {
     }
     
     public FontAwesomeLabel pullLeft() {
-    	pull = "pull-left"; return this;
+    	pull = "fa-pull-left"; return this;
     }
     
     public FontAwesomeLabel pullRight() {
-    	pull = "pull-right"; return this;
+    	pull = "fa-pull-right"; return this;
     }
     
     public FontAwesomeLabel spin() {

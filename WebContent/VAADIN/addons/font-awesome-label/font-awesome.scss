@@ -7,6 +7,11 @@
 
 @mixin font-awesome { 
 
+	/* fix icon vertical alignment in buttons */
+	.v-button-wrap .v-icon.FontAwesomeLabelAddon {
+		line-height: inherit; 
+	}
+	
     .fa, .FontAwesomeLabelAddon, .FontAwesomeIconAddon {
         display: inline-block;
         font: normal normal normal 14px/1 FontAwesomeLabelAddon;

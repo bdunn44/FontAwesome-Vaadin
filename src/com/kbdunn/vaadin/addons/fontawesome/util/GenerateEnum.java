@@ -102,7 +102,7 @@ public class GenerateEnum {
 		int outlines = 0;
 		int count = icons.size();
 		for (Entry<String, String> icon : icons.entrySet()) {
-			outline = "\t" + icon.getKey().toUpperCase().replace("FA-",  "").replace("-", "_").replace("500PX", "FA500PX");
+			outline = "\t" + icon.getKey().toUpperCase().replace("FA-",  "").replace("-", "_").replace("500PX", "_500PX");
 			outline += "(\"" + icon.getKey() + "\", ";
 			outline += "0x" + icon.getValue();
 			outline += ")" + (++outlines == count ? ";" : ",") + "\n";

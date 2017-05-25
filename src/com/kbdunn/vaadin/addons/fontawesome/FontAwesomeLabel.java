@@ -1,6 +1,6 @@
 package com.kbdunn.vaadin.addons.fontawesome;
 
-import com.vaadin.shared.ui.label.ContentMode;
+import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.Label;
 
 public class FontAwesomeLabel extends Label {

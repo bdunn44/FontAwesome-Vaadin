@@ -5,7 +5,7 @@
 	<!-- Properties -->
 	<property name="home" value="${user.dir}"/>
 	<property name="jar-name" value="font-awesome-label"/>
-	<property name="release" value="1.3.4"/>
+	<property name="release" value="1.4.0"/>
 	<property name="font-awesome-stylesheet" value="VAADIN/addons/font-awesome-label/font-awesome.scss"/>
 	<property name="font-awesome-files" value="VAADIN/addons/font-awesome-label/**/*"/>
 

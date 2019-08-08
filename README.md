@@ -1,3 +1,5 @@
+Update: This project is no longer actively maintained. Please check forks for newer releases.
+
 #FontAwesome-Vaadin
 
 Do you want the newer Font Awesome icons not currently packaged in Vaadin? This addon includes a replacement FontAwesome enum with the latest icons, and enhances their native functionality. 
